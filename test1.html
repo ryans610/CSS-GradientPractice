@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding-top: 50px;
+        }
+        #B1{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background: linear-gradient(to top, #969495 0%, #969495 100%);
+            border-style: solid;
+            border-width: 0 58px 100px 58px;
+            border-color: red yellow gray blue;
+            margin-bottom: 50px;
+        }
+        .metal-knob{
+            width: 200px;
+            height: 200px;
+            background: green;
+            border-radius: 100px;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .metal-knob div{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 58px 100px 58px;
+        }
+        .metal-knob div:nth-child(2n){
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-image: linear-gradient(to right, #FFFFFF 0%, #969495 100%);
+            border-image-repeat: stretch;
+        }
+        .metal-knob div:nth-child(2n+1){
+            border-color: transparent transparent red transparent;
+        }
+        .metal-knob div:nth-child(1){
+            top: 100px;
+            left: 42px;
+        }
+        .metal-knob div:nth-child(2){
+            top: 76px;
+            right: -30px;
+            transform: rotate(60deg);
+        }
+        .metal-knob div:nth-child(3){
+            top: 25px;
+            right: -30px;
+            transform: rotate(120deg);
+        }
+        .metal-knob div:nth-child(4){
+            top: 0;
+            left: 42px;
+            transform: rotate(180deg);
+        }
+        .metal-knob div:nth-child(5){
+            top: 25px;
+            left: -30px;
+            transform: rotate(240deg);
+        }
+        .metal-knob div:nth-child(6){
+            top: 76px;
+            left: -30px;
+            transform: rotate(300deg);
+        }
+        .C{
+            margin: 0 auto;
+            position: relative;
+  margin: 40px auto;
+  outline: none;
+  
+  //font: bold 6em/2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  //text-align: center;
+  //color: hsla(0,0%,20%,1);
+  //text-shadow: hsla(0,0%,40%,.5) 0 -1px 0, hsla(0,0%,100%,.6) 0 2px 1px;
+  
+  background-color: hsl(0,0%,90%);
+  //box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 4px, /* border */
+    //inset hsla(0,0%,15%, .8) 0 -1px 5px 4px, /* soft SD */
+    //inset hsla(0,0%,0%, .25) 0 -1px 0px 7px, /* bottom SD */
+    //inset hsla(0,0%,100%,.7) 0  2px 1px 7px, /* top HL */
+    
+    //hsla(0,0%, 0%,.15) 0 -5px 6px 4px, /* outer SD */
+    //hsla(0,0%,100%,.5) 0  5px 6px 4px; /* outer HL */ 
+  
+  //transition: color .2s;
+
+
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  border-radius: 80px;
+}
+        #C1{
+  background-image:
+    -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,1) 0%, hsla(0,0%,100%,0) 100%);
+        }
+        #C2{
+background-image:radial-gradient(8% 50% at 50% 0%,hsla(0,0%,100%,1) 0%,hsla(0,0%,100%,0) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div id="B1"></div>
+    <div class="metal-knob">
+        <div id="A1"></div>
+        <div id="A2"></div>
+        <div id="A3"></div>
+        <div id="A4"></div>
+        <div id="A5"></div>
+        <div id="A6"></div>
+    </div>
+    <div id="C1" class="C"></div>
+    <div id="C2" class="C"></div>
+</body>
+</html>
